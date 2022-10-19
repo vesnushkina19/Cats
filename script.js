@@ -14,7 +14,6 @@ fetch("https://sb-cats.herokuapp.com/api/2/vesnushka19/show")
         } else {
             showPopup(Array.from(popupList), "info", data.message);
         }
-        // showPopup(Array.from(popupList), "info", data.message);
     });
 
 

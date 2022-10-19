@@ -10,11 +10,11 @@ const createCard = (data, parent, arr) => {
 
     const rate = document.createElement("div");
     rate.className = "rate";
-    rate.innerHTML = "<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>";
+    rate.innerHTML = "<span>✪</span><span>✪</span><span>✪</span><span>✪</span><span>✪</span>";
 
     const pic = document.createElement("div");
     pic.className = "pic";
-    pic.style.backgroundImage = `url(${data.img_link || "images/с1.png"})`;
+    pic.style.backgroundImage = `url(${data.img_link || "images/zamena.jpeg"})`;
 
     const name = document.createElement("div");
     name.className = "name";
