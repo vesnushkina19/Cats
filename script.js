@@ -15,9 +15,7 @@ fetch("https://sb-cats.herokuapp.com/api/2/vesnushka19/show")
             showPopup(Array.from(popupList), "info", data.message);
         }
     });
-
-
-
+    
 popupList.forEach(p => {
     p.firstElementChild.addEventListener("click", e => {
         p.classList.remove("active");

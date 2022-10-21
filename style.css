@@ -50,7 +50,7 @@ body {
 .card>.pic {
     width: 70px;
     /* height: 70px; */
-    background-color: silver;
+    background-color: rgb(238, 232, 170, 0.3);
     border-radius: 8px;
     grid-row-end: span 2;
     background-size: cover;
@@ -128,4 +128,15 @@ body {
 }
 .popup h2 {
     margin-bottom: 30px;
+}
+@media (max-width: 720px) {
+    .dashboard {
+        flex-direction: row;
+    }
+    .container {
+        grid-template-columns: repeat (2, 1fr);
+    }
+    .card {
+
+    }
 }
