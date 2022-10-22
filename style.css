@@ -130,11 +130,22 @@ body {
     margin-bottom: 30px;
 }
 @media (max-width: 720px) {
+    .body {
+        display: flex;
+        flex-direction: row;
+        width: 100vw;
+    }
     .dashboard {
         flex-direction: row;
+        padding: 10px;
+        gap: 10px;
     }
     .container {
         grid-template-columns: repeat (2, 1fr);
+    }
+    .bth {
+        width: 25px;
+        height: 25px;
     }
     .card {
 
