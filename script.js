@@ -20,11 +20,11 @@ let catsList = localStorage.getItem("cats");
 if (catsList) {
     catsList = JSON.parse(catsList);
 }
-console.log(catsList)
+console.log(catsList);
 
 const addForm = document.forms.add;
 addForm.addEventListener("submit", function(e) {
-   addCat(e, api, Array.from(popupList))
+   addCat(e, api, Array.from(popupList), catsList);
 });
 
 if (!catsList) {
@@ -67,3 +67,16 @@ popBox.addEventListener("click", function(e) {
         })
     }
 });
+
+// let dashboard = document.createElement("div");
+// dashboard = document.querySelector(".dashboard");
+// dashboard.addEventListener("click", function(e) {
+//     if (e.target === this) {
+//         dashboard.remove("active");
+//         dashboard.forEach(p => {
+//             if (p.dashboard.contains("active")) {
+//                 p.dashboard.remove("active");
+//             }
+//         })
+//     }
+// });

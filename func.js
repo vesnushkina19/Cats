@@ -21,9 +21,17 @@ const createCard = (data, parent, arr) => {
     name.className = "name";
     name.innerText = data.name;
 
+    const content = document.createElement("div");
+    content.className = "content";
+    content.innerText = data.description;
+
     card.append(pic, age, rate, name);
     card.addEventListener("click", function() {
         showPopup(arr, "card");
+
+
+    
+
     });
     parent.append(card);
 }
@@ -31,13 +39,15 @@ const createCard = (data, parent, arr) => {
 const showPopup = (list, type, content) => {
     let el = list.filter(el => el.dataset.type === type)[0];
     // switch (type) {
-    //     case "card": 
-    //     case "info":
-    //     case "form":
+    //  case "card": 
+    //  case "info": 
+    //  case "form":
     // }
     el.classList.add("active");
     el.parentElement.classList.add("active");
 }
+
+
 
 const addCat = (e, api, popupList) => {
     e.preventDefault();
@@ -58,6 +68,10 @@ const addCat = (e, api, popupList) => {
     .then(data => {
         console.log(data.message);
         if (data.message === "ok") {
+            localStorage.setItem("cat", JSON.stringify(body));
+            createCard(body, document.querySelector(".container"));
+            store.push(body);
+            localStorage.setItem("cats", JSON.stringify(store));
             e.target.reset();
             document.querySelector(".popup-wrapper").classList.remove("active");
         }
