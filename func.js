@@ -78,3 +78,4 @@ const addCat = (e, api, popupList) => {
         //showPopup(popupList, "info", data.message);
     })
 }
+
