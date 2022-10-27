@@ -11,7 +11,7 @@ const createCard = (data, parent, arr) => {
 
     const rate = document.createElement("div");
     rate.className = "rate";
-   rate.innerText =  rate.innerHTML = "<span>✪</span>".repeat(Math.max(Math.min(data.rate, 10), 0));
+   rate.innerHTML = "<span>✪</span>".repeat(Math.max(Math.min(data.rate, 10), 0));
 
     const pic = document.createElement("div");
     pic.className = "pic";
@@ -78,3 +78,4 @@ const addCat = (e, api, popupList) => {
         //showPopup(popupList, "info", data.message);
     })
 }
+

@@ -15,6 +15,7 @@ const container = document.querySelector(".container");
 const btn = document.querySelector(".dashboard").firstElementChild;
 const popupList = document.querySelectorAll(".popup");
 const popBox = document.querySelector(".popup-wrapper");
+const del = document.querySelector(".del");
 
 let catsList = localStorage.getItem("cats");
 if (catsList) {
@@ -80,3 +81,10 @@ popBox.addEventListener("click", function(e) {
 //         })
 //     }
 // });
+
+del.addEventListener("click", function(e) {
+    body.remove(lastChild);
+    if (data.message === "ok") {
+        localStorage.removeItem(JSON.stringify(body.lastChild));
+    }
+});
