@@ -27,7 +27,8 @@ const createCard = (data, parent, arr) => {
 
     card.append(pic, age, rate, name);
     card.addEventListener("click", function() {
-        showPopup(arr, "card");
+        showPopup(arr, "card").innerText = data.description;
+
 
 
     
@@ -38,13 +39,9 @@ const createCard = (data, parent, arr) => {
 
 const showPopup = (list, type, content) => {
     let el = list.filter(el => el.dataset.type === type)[0];
-    // switch (type) {
-    //  case "card": 
-    //  case "info": 
-    //  case "form":
-    // }
     el.classList.add("active");
     el.parentElement.classList.add("active");
+    return el;
 }
 
 
